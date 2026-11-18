@@ -48,8 +48,8 @@ h1, h2, h3, nav, time, body > footer {
 }
 
 h1 {
-    font-size: 1.75rem;
-    font-weight: 600;
+    font-size: 2.25rem;
+    font-weight: 800;   /* boldest Martian Mono weight */
 }
 
 h2 {
