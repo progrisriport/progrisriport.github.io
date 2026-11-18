@@ -1,0 +1,102 @@
+/* progris riport · style.css
+   Poor, simple, personal. */
+
+/* Fonts: Martian Mono + Martian Grotesk (SIL OFL, see fonts/OFL-*.txt).
+   Variable fonts: one file each, every weight and width. */
+@font-face {
+    font-family: "Martian Mono";
+    src: url("/fonts/MartianMonoVF.woff2") format("woff2");
+    font-weight: 100 800;
+    font-stretch: 75% 112.5%;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Martian Grotesk";
+    src: url("/fonts/MartianGroteskVF.woff2") format("woff2");
+    font-weight: 100 900;
+    font-stretch: 75% 150%;
+    font-display: swap;
+}
+
+/* Tokens: change values here, not in the rules below. */
+:root {
+    --mono: "Martian Mono", ui-monospace, monospace;
+    --sans: "Martian Grotesk", system-ui, sans-serif;
+    --text: #1a1a1a;
+    --muted: #666;
+    --link: #1a4fb3;
+    --bg: #fdfdfb;
+    --measure: 40rem;   /* max line length: comfortable for reading */
+}
+
+/* Page: one centered column */
+body {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    color: var(--text);
+    /* faint maze watermark: a seamless tile, see maze.svg */
+    background: var(--bg) url("/maze.svg") repeat fixed;
+    font-family: var(--sans);   /* long text: readable */
+    line-height: 1.6;
+}
+
+/* The "typed" parts: title, nav, headings, dates, footer */
+h1, h2, h3, nav, time, body > footer {
+    font-family: var(--mono);
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+time,
+nav {
+    font-size: 0.85rem;
+}
+
+a {
+    color: var(--link);
+}
+
+/* Lists used as rows of links: no bullets, items side by side */
+nav ul,
+body > footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Site header: title and nav centered */
+body > header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+body > header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Riport: date in a quieter tone */
+article time {
+    color: var(--muted);
+}
+
+/* Site footer: links at the bottom, centered and quiet */
+body > footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+}
