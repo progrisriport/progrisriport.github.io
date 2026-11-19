@@ -88,8 +88,15 @@ body > header h1 a {
     text-decoration: none;
 }
 
+/* Home intro: what the name means, set apart from the riports below */
+.intro {
+    color: var(--muted);
+    margin-bottom: 3rem;
+}
+
 /* Riport: date in a quieter tone */
-article time {
+article time,
+.riport-list time {
     color: var(--muted);
 }
 
@@ -97,4 +104,53 @@ article time {
 body > footer {
     margin-top: 4rem;
     font-size: 0.9rem;
+}
+
+/* Origin: riport #0 always closes the home, set apart by a rule */
+.origin {
+    border-top: 1px solid var(--muted);
+    margin-top: 3rem;
+}
+
+.label {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Riport title on the home links to its own page: keep it looking like a title */
+article h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+article h2 a:hover {
+    text-decoration: underline;
+}
+
+/* Riport footer: where it leads (a project, a study) */
+article .related {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+}
+
+/* Riports list: one row per riport, newest first */
+.riport-list {
+    list-style: none;
+    padding: 0;
+}
+
+.riport-list li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+    align-items: baseline;
+    padding: 0.5rem 0;
+}
+
+.riport-list li.origin {
+    margin-top: 0;
+    border-top: none;
 }
