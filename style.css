@@ -146,6 +146,15 @@ article h2 a:hover {
     text-decoration: underline;
 }
 
+/* Riport signature: small, bottom right, like signing a letter */
+article .signature {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: right;
+    margin-top: 2rem;
+}
+
 /* Riport footer: where it leads (a project, a study) */
 article .related {
     font-family: var(--mono);
