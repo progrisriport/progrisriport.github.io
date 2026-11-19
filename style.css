@@ -77,10 +77,26 @@ body > footer ul {
     gap: 1.5rem;
 }
 
-/* Site header: title and nav centered */
+/* Site header: title centered */
 body > header {
     text-align: center;
+}
+
+/* Nav: stays pinned to the top while the page scrolls.
+   Slightly see-through, the maze shows blurred underneath. */
+body > nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     margin-bottom: 3rem;
+    padding: 0.75rem 0;
+    background: rgb(253 253 251 / 0.85);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+body > nav ul {
+    margin: 0;
 }
 
 body > header h1 a {
