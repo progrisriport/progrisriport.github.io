@@ -168,11 +168,28 @@ article .related {
 }
 
 .riport-list li {
+    padding: 0.5rem 0;
+}
+
+/* Link and date side by side, subtitle on its own line below */
+.riport-list .row {
     display: flex;
     flex-wrap: wrap;
     gap: 0 1rem;
     align-items: baseline;
-    padding: 0.5rem 0;
+}
+
+.riport-list .label,
+article header .label {
+    margin: 0.15rem 0 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text);   /* the riport's name: stronger than the date */
+}
+
+/* Riport header: title, then date, then subtitle, stacked */
+article header time {
+    display: block;
 }
 
 .riport-list li.origin {
